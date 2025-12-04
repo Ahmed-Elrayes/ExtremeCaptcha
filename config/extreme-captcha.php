@@ -3,7 +3,7 @@
 return [
     'width' => 200,
     'height' => 70,
-    'font' => __DIR__ . '/../resources/fonts/captcha1.ttf', // package-relative path
+    'font' => null, // if null then it will use default font
     'length' => 5,
     'font_size' => 32,
     'noise_pixels' => 400,
