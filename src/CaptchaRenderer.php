@@ -31,7 +31,10 @@ class CaptchaRenderer
         $w = config('extreme-captcha.width', 200);
         $h = config('extreme-captcha.height', 70);
         // Default to a bundled font in resources/fonts; can be overridden via config
-        $font = config('extreme-captcha.font', __DIR__ . '/../resources/fonts/captcha1.ttf');
+        $font = config('extreme-captcha.font') ?? __DIR__ . '/../resources/fonts/captcha1.ttf';
+        if (!file_exists($font)) {
+            throw new \RuntimeException("Captcha font not found at: {$font}");
+        }
         $fontSize = config('extreme-captcha.font_size', 32);
         $bgColor = config('extreme-captcha.background_color', [255, 255, 255]);
         $textColor = config('extreme-captcha.text_color', [0, 0, 0]);
