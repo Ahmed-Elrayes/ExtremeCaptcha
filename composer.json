@@ -1,0 +1,46 @@
+{
+    "name": "elrayes/extreme-captcha",
+    "description": "An advanced noisy CAPTCHA generator for Laravel with curved lines, heavy dots, distortion, custom validator, and facade.",
+    "type": "library",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "captcha",
+        "security",
+        "validation",
+        "image"
+    ],
+    "homepage": "https://github.com/Ahmed-Elrayes/ExtremeCaptcha",
+    "support": {
+        "issues": "https://github.com/Ahmed-Elrayes/ExtremeCaptcha/issues",
+        "source": "https://github.com/Ahmed-Elrayes/ExtremeCaptcha"
+    },
+    "autoload": {
+        "psr-4": {
+            "Elrayes\\Extreme\\Captcha\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Elrayes\\Extreme\\Captcha\\CaptchaServiceProvider"
+            ],
+            "aliases": {
+                "ExtremeCaptcha": "Elrayes\\Extreme\\Captcha\\Facades\\ExtremeCaptcha"
+            }
+        }
+    },
+    "authors": [
+        {
+            "name": "Ahmed Elrayes",
+            "email": "example@example.com",
+            "homepage": "https://github.com/Ahmed-Elrayes"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "ext-gd": "*",
+        "illuminate/support": ">=10.0",
+        "illuminate/validation": ">=10.0"
+    }
+}
